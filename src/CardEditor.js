@@ -8,12 +8,14 @@ class CardEditor extends React.Component {
     }
 
     addCard = () => {
+        if (!this.state.front.trim() || !this.state.back.trim()) {
+            return;
+        }
         this.props.addCard(this.state);
         this.setState({ front: '', back: '' });
     };
 
     deleteCard = index => this.props.deleteCard(index);
-
 
     handleChange = event => 
         this.setState({ [event.target.name]: event.target.value });
