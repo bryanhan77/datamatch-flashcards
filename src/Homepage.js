@@ -8,6 +8,7 @@ class Homepage extends React.Component {
         return (
             <div>
                 <Link to="/editor">Go to card editor</Link>
+                <hr></hr>
                 <Link to="/viewer">Go to card viewer</Link>
             </div>
         );
